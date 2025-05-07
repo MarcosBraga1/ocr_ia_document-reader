@@ -14,8 +14,8 @@ export class AuthController {
         const { access_token } = await this.authService.signIn(signInDto.username, signInDto.password);
         res.cookie('token', access_token, {
             httpOnly: true,
-            secure: true, // CHANGE FOR TRUE
-            sameSite: 'lax',
+            secure: process.env.NODE_ENV === 'production', // CHANGE FOR TRUE
+            sameSite: 'none',
             maxAge: 1000 * 60 * 60 // 1 hora
         });
         return { success: true };
@@ -28,8 +28,8 @@ export class AuthController {
         const { access_token } = await this.authService.signUp(signUpDto.name, signUpDto.username, signUpDto.email, signUpDto.password);
         res.cookie('token', access_token, {
             httpOnly: true,
-            secure: true, // CHANGE FOR TRUE
-            sameSite: 'lax',
+            secure: process.env.NODE_ENV === 'production', // CHANGE FOR TRUE
+            sameSite: 'none',
             maxAge: 1000 * 60 * 60 // 1 hora
         });
         return { success: true };
