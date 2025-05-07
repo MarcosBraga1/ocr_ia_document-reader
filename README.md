@@ -19,10 +19,10 @@ A aplicação foi desenvolvida como solução para um desafio técnico proposto 
 
 ## Instruções de Instalação
 ### Pré-requisitos
-**1.** Node (versão 18 ou superior)
-**2.** npm ou yarn
-**3.** PostgreSQL
-**4.** API Key do Gemini
+- **1.** Node (versão 18 ou superior)
+- **2.** npm ou yarn
+- **3.** PostgreSQL
+- **4.** API Key do Gemini
 
 ### Instalação
 ```bash
