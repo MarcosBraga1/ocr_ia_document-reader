@@ -30,7 +30,8 @@ export class AuthController {
             httpOnly: true,
             secure: true, // CHANGE FOR TRUE
             sameSite: 'none',
-            maxAge: 1000 * 60 * 60 // 1 hora
+            maxAge: 1000 * 60 * 60, // 1 hora
+            domain: '.onrender.com'
         });
         return { success: true };
     }
